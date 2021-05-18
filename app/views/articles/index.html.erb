@@ -1,9 +1,8 @@
 <h1>All Articles</h1>
-<%= link_to 'Create new article', new_article_path %>
-<ul>
+<ul class="list-group list-group-flush">
   <% @articles.each do |article| %>
-    <li><h3><%= link_to article.title, article_path(article) %></h3>
-    <p><%= article.content %></p>
+    <li class="list-group-item m-3"><div class="container d-flex flex-column align-items-center"><h3><%= link_to article.title, article_path(article), class: "link-dark" %></h3>
+    <p><%= article.content %></p></div>
     </li>
   <% end %>
 </ul>

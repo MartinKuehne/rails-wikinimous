@@ -1,2 +1,8 @@
-<h1><%= @article.title %> </h1> <%= link_to 'Edit', edit_article_path(@article) %> <%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Are you sure?" }  %>
-<p><%= @article.content %> </p>
+<h1><%= @article.title %> </h1> 
+<p class="m-3"><%= @article.content %> </p>
+
+
+<ul class="list-inline">
+  <li class="list-inline-item"><%= link_to 'Edit', edit_article_path(@article), class: "link-dark" %> </li>
+  <li class="list-inline-item"><%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Are you sure?" }, class: "link-dark"  %></li>
+</ul>
